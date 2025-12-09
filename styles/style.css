@@ -185,10 +185,46 @@ input {
   letter-spacing: 0%;
 }
 
-.content__video-card-description-container{
+.content__video-card-description-container {
   flex-grow: 1;
 }
 
+label:focus {
+  outline: none;
+}
+
+label:has(:focus-visible) {          
+  outline: #fff 1px solid;
+}
+
+.search-form__pseudo-checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #FFFFFF;
+  padding: 1px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content:"";
+  display: block;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+.search-form__pseudo-checkbox:has(:focus-visible) {
+    outline: #fff 1px solid;
+}
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
